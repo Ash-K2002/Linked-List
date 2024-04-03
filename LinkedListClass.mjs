@@ -67,14 +67,17 @@ class myLinkedList{
             {
                 popped=temp.value;
                 this.head=null;
+                this.tail=null;
             }
             else{
                 while(temp.next.next!=null)
                 {
                     temp=temp.next;
                 }
+                
                 popped=temp.next.value;
                 temp.next=null;
+                this.tail=temp;
             }
 
         }
